@@ -1,0 +1,39 @@
+.TH FLAPPCLIENT 1
+.SH NAME
+flappclient \- foolscap client
+.SH SYNOPSYS
+.nf
+.fam C
+\fbflappclient\fP (upload-file|run-command)
+.fam T
+.fi
+.SH DESCRIPTION
+This client invokes a remote services that is running as part of a 'flappserver'.
+Each service lives at the specific secret FURL, which starts with 'pb://'. This
+FURL can be passed on the command line with \-\-furl=FURL, or it can be stored in
+a file (along with the comment lines that start with '#') and passed with
+\-\-furlfile=FILE.
+.PP
+The options are described below.
+.SH OPTIONS
+.TP
+.B
+furl
+FURL of the service to contact.
+.TP
+.B
+furlfile
+File containing the FURL of the service.
+.TP
+.B
+version
+Show the version.
+.TP
+.B
+help
+Show the embedded help.
+.SH AUTHOR
+\fBflappclient\fP is a tool that ships with foolscap, created by Brian Warner.
+.PP
+This manual page was written by Elliot Murphy <elliot@ubuntu.com>, for the Debian
+project (but may be used by others).

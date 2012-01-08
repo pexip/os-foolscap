@@ -1,0 +1,54 @@
+.TH FLAPPSERVER 1
+.SH NAME
+flappserver \- foolscap server
+.SH SYNOPSYS
+.nf
+.fam C
+\fbflappserver\fP (create|add|list|start|stop)
+.fam T
+.fi
+.SH DESCRIPTION
+This command controls a foolscap application server or 'flappserver'. It
+fulfills the same role as "twistd" does for Twisted code: allows sysadmins
+to configure and launch services without obligating them to write Python
+code for each one.
+.PP
+The options are described below.
+.SH OPTIONS
+.TP
+.B
+create
+Create a new app server.
+.TP
+.B
+add
+Add new service to an app server.
+.TP
+.B
+list
+List services in an app server.
+.TP
+.B
+start
+Launch an app server.
+.TP
+.B
+stop
+Shut down an app server.
+.TP
+.B
+restart
+First stop, if necessary, then start a server.
+.TP
+.B
+version
+Show the version.
+.TP
+.B
+help
+Show the embedded help.
+.SH AUTHOR
+\fBflappserver\fP is a tool that ships with foolscap, created by Brian Warner.
+.PP
+This manual page was written by Elliot Murphy <elliot@ubuntu.com>, for the Debian
+project (but may be used by others).

@@ -1,0 +1,22 @@
+#!/usr/bin/make -f
+
+#export DH_VERBOSE=1
+
+%:
+	dh $@ --with python2 --buildsystem=python_distutils
+
+override_dh_installchangelogs:
+	dh_installchangelogs -i NEWS
+
+override_dh_auto_test:
+	# uses trial instead of setup.py test
+	PYTHONPATH=$(CURDIR) dh_auto_test --buildsystem=makefile
+
+override_dh_auto_clean:
+	# remove pyc's from testsuite
+	find . -name "*.pyc" | xargs rm -f
+	rm -rf _trial_temp
+	rm -rf build
+
+override_dh_compress:
+	dh_compress -X.xhtml

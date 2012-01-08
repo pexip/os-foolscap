@@ -1,0 +1,27 @@
+Source: foolscap
+Section: python
+Priority: optional
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Uploaders: Stephan Peijnik <debian@sp.or.at>,
+           Julian Taylor <jtaylor.debian@googlemail.com>
+Build-Depends-Indep: debhelper (>= 7.0.50~),
+                     python-all (>= 2.6.6-3),
+                     python-openssl,
+                     python-setuptools,
+                     python-twisted-core,
+                     python-twisted-web,
+                     python-zope.interface
+X-Python-Version: >= 2.4
+Standards-Version: 3.9.2
+Homepage: http://foolscap.lothar.com/
+Vcs-Svn: svn://svn.debian.org/python-modules/packages/foolscap/trunk/
+Vcs-Browser: http://svn.debian.org/viewsvn/python-modules/packages/foolscap/trunk/
+
+Package: python-foolscap
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}
+Recommends: python-openssl (>= 0.6)
+Description: object-capability-based RPC system for Twisted Python
+ Foolscap (also known as "newpb") contains a new RPC system for Twisted Python,
+ combining capability-based security, secure references, flexible
+ serialization, and technology to mitigate resource-consumption attacks.

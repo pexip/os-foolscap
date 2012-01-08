@@ -1,0 +1,45 @@
+.TH FLOGTOOL 1 "September 21, 2008" "" ""
+.SH NAME
+\fBflogtool \- foolscap log tool
+.SH SYNOPSIS
+.nf
+.fam C
+\fBflogtool\fP (tail|create-gatherer|dump|filter|web-viewer)
+.fam T
+.fi
+.SH DESCRIPTION
+flogtool is an interface to the logging capabilities in the
+\fBpython-foolscap\fP package.
+.PP
+The available options are described below.
+.SH OPTIONS
+.TP
+.B
+tail
+follow logs of the target node
+.TP
+.B
+create-gatherer
+Make a .tac file which will record all logs to a given directory.
+.TP
+.B
+create-incident-gatherer
+Make a .tac file which will record all incidents to a given directory
+.TP
+.B
+dump
+Dump the logs recorded by 'flogtool gather'.
+.TP
+.B
+filter
+Produce a new file with a subset of the events from another file.
+.TP
+.B
+web-viewer
+View the logs through a web page.
+.SH AUTHOR
+\fBflogtool\fP is a tool that ships with foolscap, created by
+Brian Warner.
+.PP
+This manual page was written by Stephan Peijnik <debian@sp.or.at>,
+for the Debian project (but may be used by others).
