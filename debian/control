@@ -1,8 +1,9 @@
 Source: foolscap
 Section: python
 Priority: optional
-Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
-Uploaders: Stephan Peijnik <debian@sp.or.at>,
+Maintainer: Pexip AS <packaging@pexip.com>
+XBCS-Original-Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+XBCS-Original-Uploaders: Stephan Peijnik <debian@sp.or.at>,
            Julian Taylor <jtaylor.debian@googlemail.com>
 Build-Depends-Indep: debhelper (>= 7.0.50~),
                      python-all (>= 2.6.6-3),
