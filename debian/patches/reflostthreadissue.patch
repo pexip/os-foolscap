@@ -1,0 +1,22 @@
+diff --git a/foolscap/referenceable.py b/foolscap/referenceable.py
+index cdc6efd..8839210 100644
+--- a/foolscap/referenceable.py
++++ b/foolscap/referenceable.py
+@@ -11,7 +11,7 @@ from zope.interface import interface
+ from zope.interface import implements
+ from twisted.python.components import registerAdapter
+ Interface = interface.Interface
+-from twisted.internet import defer
++from twisted.internet import defer, reactor
+ from twisted.python import failure, log
+ 
+ from foolscap import ipb, slicer, tokens, call, base32
+@@ -325,7 +325,7 @@ class RemoteReferenceTracker(object):
+         # time. Almost as bad as threads..
+ 
+         # instead, do stuff later.
+-        eventually(self._handleRefLost)
++        reactor.callFromThread(eventually, self._handleRefLost)
+ 
+     def _handleRefLost(self):
+         if self.ref is None or self.ref() is None:

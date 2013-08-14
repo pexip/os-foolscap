@@ -1,3 +1,10 @@
+foolscap (0.6.3-1pexip2) precise; urgency=low
+
+  * debian/patches/reflostthreadissue.patch:
+    - Add patch to fix issues when gc exercised in different thread 
+
+ -- Greg Adams <greg@pexip.com>  Wed, 14 Aug 2013 13:59:03 +0000
+
 foolscap (0.6.3-1pexip1) precise; urgency=low
 
   * Prepare Pexip packaging
