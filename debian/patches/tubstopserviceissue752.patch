@@ -1,0 +1,13 @@
+diff --git a/foolscap/pb.py b/foolscap/pb.py
+index abf7b46..aec2d70 100644
+--- a/foolscap/pb.py
++++ b/foolscap/pb.py
+@@ -660,7 +660,7 @@ class Tub(service.MultiService):
+         why = Failure(error.ConnectionDone("Tub.stopService was called"))
+         for b in self.brokers.values():
+             b.shutdown(why, fireDisconnectWatchers=False)
+-        for b in self.unauthenticatedBrokers:
++        for b in list(self.unauthenticatedBrokers):
+             b.shutdown(why, fireDisconnectWatchers=False)
+ 
+         return defer.DeferredList(dl)

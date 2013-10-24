@@ -1,3 +1,4 @@
 minimal_twisted_deps.patch
 deadrefnameexception.patch
 reflostthreadissue.patch
+tubstopserviceissue752.patch
